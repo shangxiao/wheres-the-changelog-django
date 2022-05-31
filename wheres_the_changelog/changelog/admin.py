@@ -1,3 +1,13 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Changelog, Repository
+
+
+@admin.register(Repository)
+class RepositoryAdmin(admin.ModelAdmin):
+    ...
+
+
+@admin.register(Changelog)
+class ChangelogAdmin(admin.ModelAdmin):
+    ...
